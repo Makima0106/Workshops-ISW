@@ -1,0 +1,135 @@
+:root {
+    --header: #49225b;
+    --titulo_1: #330646;
+    --texto_1: #3a1b48;
+    --texto_2: #faf1ff;
+    --fondo: #eedafc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.seccion_titulo_pagina {
+    background-color: var(--header);
+    padding: 20px;
+}
+
+.titulo_pagina {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--fondo);
+}
+
+.seccion_1 {
+    border: 1px solid var(--fondo);
+    background-color: var(--fondo);
+    text-align: center;
+    padding: 10%;
+}
+
+.imagen_seccion_1 {
+    background-image: url(https://www.mchose.store/cdn/shop/files/Black_Purple.png?v=1742279779);
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+    height: 200px;
+}
+
+.titulo {
+    color: var(--titulo_1);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.texto_1 {
+    color: var(--texto_1);
+    font-size: 20px;
+}
+
+.texto_2 {
+    color: var(--texto_2);
+    font-size: 20px;
+}
+
+.imagenes_fondo
+{
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+    padding: 10%;  
+}
+
+.seccion_2 {
+    background-image: linear-gradient(rgba(177, 96, 214, 0.7),rgba(64, 26, 81, 0.7)), url("https://www.pngplay.com/wp-content/uploads/13/Mechanical-Keyboard-Transparent-Free-PNG.png");
+}
+
+.contenedor_estadistica {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+.seccion_3 {
+    border: 1px solid var(--fondo);
+    background-color: var(--fondo);
+    text-align: center;
+    padding: 10%;
+}
+
+.imagen_1
+{
+    background-image: url("https://kbdfans.com/cdn/shop/products/10_2531de96-b718-4573-aa86-9605954c0dc2.jpg?v=1669787261");
+}
+
+.imagen_2
+{
+    background-image: url("https://en.akkogear.com/wp-content/themes/xtra/img/index/1.jpg");
+}
+
+.imagen_seccion_3
+{
+    
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid transparent;
+    border-radius: 5%;
+}
+
+.seccion_4 {
+    background-image: linear-gradient(rgba(185, 120, 215, 0.7),rgba(73, 37, 90, 0.7)), url("https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-keyboard/pro-x-keyboard-gallery-2.png?v=1");
+}
+
+.btn
+{
+    background-color: var(--header);
+    border: 1px solid var(--header);
+    color: var(--fondo);
+    margin: 5%;
+    font-size: 20px;
+}
+
+.btn:hover
+{
+    background-color: var(--titulo_1);
+    border: 1px solid var(--texto_1);
+    color: var(--fondo);
+    font-size: 20px;
+}
+
+.btn:active
+{
+    background-color: var(--titulo_1) !important;
+    border: 1px solid var(--texto_1);
+    color: var(--fondo);
+    font-size: 20px;
+}
