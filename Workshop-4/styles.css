@@ -4,6 +4,7 @@
     --texto_1: #3a1b48;
     --texto_2: #faf1ff;
     --fondo: #eedafc;
+    --letra: #ab53eb;
 }
 
 * {
@@ -20,87 +21,84 @@ body {
     padding: 20px;
 }
 
-.titulo_pagina {
+#titulo_pagina {
     text-transform: uppercase;
     font-weight: bold;
     color: var(--fondo);
 }
 
+.titulo_pagina::first-letter {
+    color: var(--letra);
+}
+
 .seccion_1 {
+    align-items: center;
+}
+
+.seccion_1,
+.seccion_3 {
     border: 1px solid var(--fondo);
     background-color: var(--fondo);
     text-align: center;
-    padding: 10%;
+    padding: 5%;
 }
 
 .imagen_seccion_1 {
-    background-image: url(https://www.mchose.store/cdn/shop/files/Black_Purple.png?v=1742279779);
-    background-position: center;
-    text-align: center;
-    background-size: cover;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .titulo {
     color: var(--titulo_1);
     font-weight: bold;
-    font-size: 25px;
+    font-size: 180%;
+    padding: 1%;
+}
+
+.texto_1,
+.texto_2 {
+    font-size: 160%;
+}
+
+.titulo + p {
+    padding: 3%;
 }
 
 .texto_1 {
     color: var(--texto_1);
-    font-size: 20px;
 }
 
 .texto_2 {
     color: var(--texto_2);
-    font-size: 20px;
 }
 
-.imagenes_fondo
-{
+.imagenes_fondo {
     background-size: cover;
     background-position: center;
 
     text-align: center;
-    padding: 10%;  
+    padding: 6%;  
 }
 
 .seccion_2 {
     background-image: linear-gradient(rgba(177, 96, 214, 0.7),rgba(64, 26, 81, 0.7)), url("https://www.pngplay.com/wp-content/uploads/13/Mechanical-Keyboard-Transparent-Free-PNG.png");
 }
 
-.contenedor_estadistica {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-}
-
-.seccion_3 {
-    border: 1px solid var(--fondo);
-    background-color: var(--fondo);
-    text-align: center;
-    padding: 10%;
-}
-
-.imagen_1
-{
+.imagen_1 {
     background-image: url("https://kbdfans.com/cdn/shop/products/10_2531de96-b718-4573-aa86-9605954c0dc2.jpg?v=1669787261");
 }
 
-.imagen_2
-{
+.imagen_2 {
     background-image: url("https://en.akkogear.com/wp-content/themes/xtra/img/index/1.jpg");
 }
 
-.imagen_seccion_3
-{
-    
+.imagen_seccion_3 {
     height: 300px;
     background-size: cover;
     background-position: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0px 10px;
     border: 1px solid transparent;
     border-radius: 5%;
 }
@@ -109,27 +107,129 @@ body {
     background-image: linear-gradient(rgba(185, 120, 215, 0.7),rgba(73, 37, 90, 0.7)), url("https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-keyboard/pro-x-keyboard-gallery-2.png?v=1");
 }
 
-.btn
-{
+button[type="button"] {
     background-color: var(--header);
     border: 1px solid var(--header);
     color: var(--fondo);
+    padding: 3%;
     margin: 5%;
+    border-radius: 8px;
     font-size: 20px;
 }
 
-.btn:hover
-{
+.boton:hover,
+.boton:active {
     background-color: var(--titulo_1);
     border: 1px solid var(--texto_1);
     color: var(--fondo);
     font-size: 20px;
 }
 
-.btn:active
-{
-    background-color: var(--titulo_1) !important;
-    border: 1px solid var(--texto_1);
-    color: var(--fondo);
-    font-size: 20px;
+.contenedor_grid_1,
+.contenedor_grid_2 {
+    display: grid;
+}
+
+.contenedor_grid_1 {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(1, auto);
+}
+
+.contenedor_grid_2 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+}
+
+.elemento_1_grid_2 {
+    grid-column: 1/2;
+}
+
+.elemento_2_grid_2 {
+    grid-column: 2/3;
+}
+
+.elemento_3_grid_2 {
+    grid-column: 3/4;
+}
+
+.elemento_4_grid_2 {
+    grid-column: 1/2;
+}
+
+.elemento_5_grid_2 {
+    grid-column: 2/3;
+}
+
+.elemento_6_grid_2 {
+    grid-column: 3/4;
+}
+
+.elemento_1_grid_2, .elemento_2_grid_2, .elemento_3_grid_2 {
+    grid-row: 1/2;
+}
+
+.elemento_4_grid_2, .elemento_5_grid_2, .elemento_6_grid_2 {
+    grid-row: 2/3;
+}
+
+@media (max-width: 1024px) {
+    .contenedor_grid_2 {
+        padding: 3%;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .contenedor_grid_1
+    .contenedor_grid_2{
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor_grid_1 {
+        grid-template-rows: auto auto;
+    }
+
+    .elemento_1_grid_2 {grid-row: 1/2;}
+
+    .elemento_2_grid_2 {grid-row: 3/4;}
+
+    .elemento_3_grid_2 {grid-row: 5/6;}
+
+    .elemento_4_grid_2 {grid-row: 2/3;}
+
+    .elemento_5_grid_2 {grid-row: 4/5;}
+
+    .elemento_6_grid_2 {grid-row: 6/7;}
+
+    .elemento_1_grid_1,
+    .elemento_2_grid_1,
+    .elemento_1_grid_2,
+    .elemento_2_grid_2,
+    .elemento_3_grid_2,
+    .elemento_4_grid_2,
+    .elemento_5_grid_2,
+    .elemento_6_grid_2 {
+        grid-column: 1/-1;
+    }
+
+    .elemento_4_grid_2,
+    .elemento_5_grid_2,
+    .elemento_6_grid_2 {
+        padding-bottom: 30px;
+    }
+
+    .titulo {
+        font-size: 160%;
+    }
+
+    .texto_1,
+    .texto_2 {
+        font-size: 140%;
+    }
+
+    .imagen_seccion_3
+    {
+        margin: 10px 0px;
+    }
 }
