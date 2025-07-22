@@ -1,0 +1,1 @@
+Este repositorio esta destinado a la entrega del proyecto numero 1 del curso de deseño de aplicaciones web, dicho proyecto esta hecho segun las indicaciones dadas por el profesor Bladimir Arroyo Blanco en el ciclo numero 5 del año 2025.
