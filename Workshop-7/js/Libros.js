@@ -7,8 +7,7 @@ document.getElementById("add-book-button").addEventListener("click", function (e
     e.preventDefault();
 
     const bookName = $("#title").val();
-    const comboAuthor = document.getElementById("authors-list");
-    const authorName = comboAuthor.options[comboAuthor.selectedIndex].text;
+    const authorName = document.getElementById("authors-list").value;
 
     //insert to a database
     let booksDb = JSON.parse(localStorage.getItem("books"));

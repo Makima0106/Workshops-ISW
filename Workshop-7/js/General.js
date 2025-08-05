@@ -14,17 +14,17 @@ function showListOfBooks() {
         let rows = "";
         books.forEach((book, index) => {
             
-            // let authorName = "desconocido";
-            // authors.forEach((author) => {
-            //     if (book.author === author.id) {
-            //         authorName = author.name;
-            //     }
-            // });
+            let authorName = "Desconocido";
+            authors.forEach((author) => {
+                if (book.author == author.id) {
+                    authorName = author.name;
+                }
+            });
 
             let row = `<tr>`;
             row += `<td>${book.id}</td>`;
             row += `<td>${book.name}</td>`;
-            row += `<td>${book.author}</td>`;
+            row += `<td>${authorName}</td>`;
             row += `<td> <a onclick="editBook(${book.id})" class="link edit">Edit</a>  |  <a  onclick="deleteBook(${book.id});" class="link delete">Delete</a>  </td>`;
             rows += row + "</tr>";
         });
